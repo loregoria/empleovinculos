@@ -1,7 +1,8 @@
 import streamlit as st
 import pandas as pd
 import io
-from supabase import create_client
+#from supabase import create_client
+from supabase import Client, create_client
 
 # Configuración de la página
 st.set_page_config(page_title="Búsqueda de Vínculos", page_icon="🔍", layout="centered")
