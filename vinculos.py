@@ -1,7 +1,20 @@
 import streamlit as st
 import pandas as pd
 import io
+import subprocess
+import sys
+
+
+
+# Asegurar instalación de supabase
+try:
+    import supabase
+except ImportError:
+    subprocess.run([sys.executable, "-m", "pip", "install", "--upgrade", "supabase"], check=True)
+    import supabase
+
 from supabase import create_client
+
 
 # Configuración de la página
 st.set_page_config(page_title="Búsqueda de Vínculos", page_icon="🔍", layout="centered")
